@@ -1,0 +1,24 @@
+{
+  "name": "frame-bot",
+  "version": "0.0.1",
+  "description": "Un bot twitter qui encadre des images !",
+  "main": "bot.js",
+  "dependencies": {
+    "jimp": "^0.2.28",
+    "twit": "^2.2.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yopaman",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yopaman/FrameBot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Yopaman/FrameBot/issues"
+  },
+  "homepage": "https://github.com/Yopaman/FrameBot#readme"
+}
