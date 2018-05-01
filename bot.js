@@ -21,7 +21,8 @@ stream.on("tweet", tweet => {
 
             Promise.all([frame, background]).then(images => {
                 images[0].resize(images[1].bitmap.width, images[1].bitmap.height)
-                images[1].composite(images[0], 0, 0,)
+                images[1].resize(images[1].bitmap.width - ((images[1].bitmap.width * 8.356 / 100) + (images[1].bitmap.width * 8.561 / 100)), images[1].bitmap.height - ((images[1].bitmap.height * 10.955 / 100) + (images[1].bitmap.height * 11.506 / 100)))
+                images[0].composite(images[1],images[0].bitmap.width * 8.350 / 100, images[0].bitmap.height * 10.966 / 100)
                 .write("framed.png", (err, imgB64) => {
                     var b64content = fs.readFileSync('framed.png', { encoding: 'base64' })
                     T.post("media/upload", {media_data: b64content}, (err, data, res) => {
